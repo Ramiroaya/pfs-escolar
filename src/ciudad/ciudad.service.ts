@@ -24,7 +24,7 @@ constructor(
   }
 
   async findOne(id: number): Promise<Ciudad> {
-    let criterio : FindOneOptions = { relations: [ 'escuela' ], where: { idEscuela: id } }
+    let criterio : FindOneOptions = { relations: [ 'escuela' ], where: { idCiudad: id } }
     let ciudad : Ciudad = await this.ciudadRepository.findOne( criterio );
     return ciudad ;
 

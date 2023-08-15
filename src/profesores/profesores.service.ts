@@ -24,7 +24,7 @@ export class ProfesoresService {
    }
  
     async findOne(id: number):Promise<Profesore> {
-     let criterio : FindOneOptions = { relations: [ 'clase' ], where: { idClase: id } }
+     let criterio : FindOneOptions = { relations: [ 'clase' ], where: { idProfesor: id } }
      let profesore : Profesore = await this.profesoreRepository.findOne( criterio );
      return profesore ;
  
